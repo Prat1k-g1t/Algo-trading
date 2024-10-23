@@ -5,8 +5,8 @@ import time
 from datetime import datetime, timedelta
 
 # Alpaca API keys (replace with your own)
-API_KEY = 'YOUR_ALPACA_API_KEY'
-API_SECRET = 'YOUR_ALPACA_SECRET_KEY'
+API_KEY = 'PLACEHOLDER_API_KEY'
+API_SECRET = 'PLACEHOLDER_SECRET_KEY'
 BASE_URL = 'https://paper-api.alpaca.markets'  # Use paper trading environment
 
 # Create an Alpaca API instance
