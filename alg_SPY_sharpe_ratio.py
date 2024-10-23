@@ -4,18 +4,18 @@ import pandas as pd
 import time
 from datetime import datetime, timedelta
 
-# Alpaca API keys (replace with your own)
+# Alpaca API keys
 API_KEY = 'PLACEHOLDER_API_KEY'
 API_SECRET = 'PLACEHOLDER_SECRET_KEY'
-BASE_URL = 'https://paper-api.alpaca.markets'  # Use paper trading environment
+BASE_URL = 'https://paper-api.alpaca.markets'  # Restricting to paper trading environment
 
-# Create an Alpaca API instance
+# Creating an Alpaca API instance
 api = tradeapi.REST(API_KEY, API_SECRET, BASE_URL, api_version='v2')
 
 # Define constants
 SYMBOL = "SPY"
-RISK_FREE_RATE = 0.0001  # Risk-free rate, assume 0.01% daily
-WINDOW_LENGTH = 30  # Rolling window of 30 days for returns
+RISK_FREE_RATE = 0.0001  # Setting risk-free rate, assume 0.01% daily
+WINDOW_LENGTH = 30  # Setting rolling window of 30 days for returns
 SHARPE_THRESHOLD = 1.1  # Sharpe Ratio threshold
 
 # Function to calculate the Sharpe Ratio
@@ -90,7 +90,7 @@ def trade_based_on_sharpe():
 while True:
     current_time = datetime.now().strftime('%H:%M:%S')
     
-    # Run the bot daily at 30 minutes after the market opens (9:30 AM - 4:00 PM Eastern)
+    # Run the bot daily at 30 minutes after the market opens. Note the times (9:30 AM - 4:00 PM Eastern)
     if current_time == "09:30:00":
         trade_based_on_sharpe()
     
