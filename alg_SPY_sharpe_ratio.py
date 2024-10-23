@@ -1,3 +1,11 @@
+"""
+    An trading algorithm for trading SPY stocks based on a Sharpe ration of 1.1.
+    The Sharpe ratio is calculated daily for SPY
+    SPY is bought if the Sharpe ratio exceeds 1.1 and sell other wise
+"""
+"""
+    Import dependencies
+"""
 import alpaca_trade_api as tradeapi
 import numpy as np
 import pandas as pd
